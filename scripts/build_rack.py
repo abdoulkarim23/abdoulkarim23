@@ -344,7 +344,7 @@ def main():
             })
         output = ROOT / locale["output"]
         output.write_text(render(user, units, weeks, last_push, locale), encoding="utf-8")
-        print(f"{output.name} : {len(units)} unités")
+        print(f"{output.name} : {len(units)} unités, dernier push le {short_date(last_push, locale)}")
 
 
 if __name__ == "__main__":
